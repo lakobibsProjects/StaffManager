@@ -1,4 +1,5 @@
-﻿using StaffManager.Model.EmployeeModel;
+﻿using StaffManager.Model.DBService;
+using StaffManager.Model.EmployeeModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,10 +33,12 @@ namespace StaffManager.Model.WageModel
             {
                 var result = CalculateWage(employee.GeneralRate, RateLimit, RateIncrement, beginDate, endDate);
                 // todo: push dbconnector to signature
-                /*foreach (var s in employee.GetSubourdinates(new InternalDBConnector()))
+                //необходимо отвязать рассчет от конкретного экзепляра базы данных. Например можно затребовать ее в сигнатуре
+                foreach (var s in new ObservableCollectionService().GetSubordinates((employee as Employee)))
                 {
-                    result += s.getWage() * subordinatesRateIncrement;     //todo: NRE
-                }*/
+                    if (s != null)
+                        result += s.Wage.CalculateWage(s) * subordinatesRateIncrement;
+                }
                 return result;
             }
             else
@@ -53,7 +56,7 @@ namespace StaffManager.Model.WageModel
                 double result = generalRate;
                 int yearsOfWork = (endDate - beginDate).Days / 365;      //todo: correct to leap year
                 result = RateIncrement * yearsOfWork > RateLimit ? result * (1 + RateLimit) : result * (1 + RateIncrement * yearsOfWork);
-
+                //не учитывает подчиненных
                 return result;
             }
             else

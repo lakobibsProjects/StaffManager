@@ -23,7 +23,7 @@
                         <GridViewColumn Header="Position" 
                                         DisplayMemberBinding="{Binding Position}" />
                         <GridViewColumn Header="Employment Date"
-                                        DisplayMemberBinding="{Binding XPath=EmploymentDate}"/>
+                                        DisplayMemberBinding="{Binding EmploymentDate}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

@@ -14,13 +14,14 @@ namespace StaffManager.Model.DBService
     [AddINotifyPropertyChangedInterface]
     public class ObservableCollectionService : IDBService
     {
-        ObservableCollection<Employee> employees;
+        private ObservableCollection<Employee> employees;
 
         public ObservableCollectionService()
         {
             employees = new ObservableCollection<Employee>();
             InitializeCollection();
         }
+        #region IDBService methods
         public void AddChief(Employee chief, Employee subordinate)
         {
             if (employees.Contains(chief) && employees.Contains(subordinate))
@@ -89,6 +90,7 @@ namespace StaffManager.Model.DBService
                 employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().ChiefID = -1;
             }
         }
+        #endregion
 
         private void InitializeCollection()
         {

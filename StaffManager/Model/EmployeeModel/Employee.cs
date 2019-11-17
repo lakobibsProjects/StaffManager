@@ -59,13 +59,14 @@ namespace StaffManager.Model.EmployeeModel
             protected set { generalRate = value; }
         }
 
-        [System.Data.Linq.Mapping.Association(Storage = "chief", ThisKey = "ChiefID")]
         public IEmployee Chief
         {
             get { return chief; }
             set { chief = value; }  //todo: change logic to make private or protected
         }
         //механизм для десериализации механизма расчета заработной платы
+        //механизм взаимодействия с интерфейсом IWage является недоработанным и трубет переработки
+        //todo: add logic to simple return numeric Wage
         public IWage Wage
         {
             get
@@ -74,27 +75,23 @@ namespace StaffManager.Model.EmployeeModel
                 {
                     case "EmployeeWage":
                         return new EmployeeWage(this);
-                        break;
                     case "ManagerWage":
                         return new ManagerWage(this);
-                        break;
                     case "SalesmanWage":
                         return new SalesmanWage(this);
                     default:
                         throw new ArgumentException("Unhandled type of Wage");
-                        break;
                 }
             }
-
-            set { Wage = value; }
         }
         [Column(Name = "WageType", DbType = "VARCHAR")]
         public string WageType { get; set; }
         //change later to enum
-        //упрощение. сделано для улучшения взаимодействия с базой данных
+        //упрощение. тип данных string сделан для улучшения взаимодействия с базой данных. 
+        //рекомендуется заменить либо на enum, либо на коллекцию должностей
         [Column(Name = "Position", DbType = "VARCHAR")]
         public string Position { get; set; }
-
+        [Column(Name = "ChiefID", DbType = "INTEGER")]
         public int ChiefID { get; set; }
         [Column(Name = "CanBeChief", DbType = "INTEGER")]
         public bool CanBeChief { get; set; } = false;

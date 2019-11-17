@@ -3,6 +3,9 @@ using StaffManager.Model.EmployeeModel;
 
 namespace StaffManager.Model.DBService
 {
+    /// <summary>
+    /// Unterface with general functional to operate with DB of staff
+    /// </summary>
     public interface IDBService
     {
         void AddChief(Employee chief, Employee subordinate);

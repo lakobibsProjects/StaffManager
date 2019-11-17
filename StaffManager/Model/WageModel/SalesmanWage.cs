@@ -1,4 +1,5 @@
-﻿using StaffManager.Model.EmployeeModel;
+﻿using StaffManager.Model.DBService;
+using StaffManager.Model.EmployeeModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -35,7 +36,7 @@ namespace StaffManager.Model.WageModel
 
             return result;
         }
-
+        
         public override double CalculateWage(double generalRate, double rateLimit, double rateIncriment, DateTime beginDate, DateTime endDate)
         {
             double result = generalRate;
@@ -43,7 +44,8 @@ namespace StaffManager.Model.WageModel
             {
                 int yearsOfWork = (DateTime.Now - beginDate).Days / 365;      //todo: correct to leap year
                 result = RateIncrement * yearsOfWork > RateLimit ? result * (1 + RateLimit) : result * (1 + RateIncrement * yearsOfWork);
-                //result += SubordinatesBonus(employee as AbstractChiefableEmployee);
+                //result += SubordinatesBonus(employee as Employee);
+                //не учитывает подчиненных
 
                 return result;
             }
@@ -57,7 +59,7 @@ namespace StaffManager.Model.WageModel
         private double SubordinatesBonus(IEmployee beneficiar)
         {       // todo: push dbconnector to signature
             double bonus = 0;
-            /*ObservableCollection<IEmployee> sub = beneficiar.GetSubourdinates(new InternalDBConnector());
+            ObservableCollection<Employee> sub = new ObservableCollectionService().GetSubordinates((beneficiar as Employee));
 
             foreach (var s in sub)
             {
@@ -65,9 +67,9 @@ namespace StaffManager.Model.WageModel
                 {
                     bonus += SubordinatesBonus(s);
                 }
-                bonus += s.getWage() * subordinatesRateIncrement;
+                bonus += s.Wage.CalculateWage(s) * subordinatesRateIncrement;
             }
-            */
+            
             return bonus;
         }
     }

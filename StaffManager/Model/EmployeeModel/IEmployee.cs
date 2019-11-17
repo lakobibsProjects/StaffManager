@@ -20,7 +20,7 @@ namespace StaffManager.Model.EmployeeModel
         string Position { get; }
         int ChiefID { get; }
         bool CanBeChief { get; }
-        IWage Wage { get; set; }
+        IWage Wage { get; }
         string WageType { get; set; }
 
         /*void AddChief(IEmployee chief);

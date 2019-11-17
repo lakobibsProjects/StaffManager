@@ -57,7 +57,6 @@ namespace StaffManager.ViewModel
                 current.Close();
             }
         }
-        //todo: correct with fabric
         private void OnSave(object obj)
         {
             Employee employee = null;
@@ -75,7 +74,6 @@ namespace StaffManager.ViewModel
                     break;
                 default:
                     throw new ArgumentException("Unhandled position of employee");
-                    break;
             }
 
             if (employee != null)

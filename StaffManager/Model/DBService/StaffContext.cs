@@ -15,7 +15,8 @@ namespace StaffManager.Model.DBService
         public StaffContext() :
             base(new SQLiteConnection()
             {
-                //упрощение. datasource содержит абсолютный путь. необходимо заменить на относительный                
+                //упрощение. datasource содержит абсолютный путь. необходимо заменить на относительный
+                //проблема не может найти SQLite.interop.dll
                 ConnectionString = new SQLiteConnectionStringBuilder() { DataSource = "C:\\Projects\\C#\\StaffManager\\StaffManager\\StaffManager\\StaffManagerDB.db", ForeignKeys = true }.ConnectionString
             }, true)
         {

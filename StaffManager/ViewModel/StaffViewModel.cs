@@ -35,7 +35,7 @@ namespace StaffManager.ViewModel
             get
             {
                 if (SelectedEmployee != null)
-                    return db.GetSubordinates(SelectedEmployee);// (SelectedEmployee.CanBeChief) ? SelectedEmployee.Subordinates : null;
+                    return db.GetSubordinates(SelectedEmployee);
                 return null;
             }
         }
@@ -46,11 +46,11 @@ namespace StaffManager.ViewModel
         {
             get
             {
-                if (SelectedEmployee != null)                
+                if (SelectedEmployee != null)
                     return SelectedEmployee.Wage.CalculateWage(SelectedEmployee);
                 return 0;
             }
-        } 
+        }
         public double SelectedSubordinateWage
         {
             get
@@ -135,8 +135,11 @@ namespace StaffManager.ViewModel
 
         private void OnRemoveChief(object obj)
         {
-            db.RemoveChief(obj as Employee);
-            ActualizeCollection();
+            if (obj is Employee)
+            {
+                db.RemoveChief(obj as Employee);
+                ActualizeCollection();
+            }
         }
 
         private void OnAddChief(object obj)

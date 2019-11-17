@@ -17,6 +17,8 @@ namespace StaffManager.Model.DBService
         {
             context = new StaffContext();
         }
+
+        #region IDBService methods
         public void AddEmployee(Employee employee)
         {
             context.Employees.Add(employee as Employee);
@@ -121,5 +123,6 @@ namespace StaffManager.Model.DBService
         {
             return context.Employees.Sum(e => e.Wage.CalculateWage(e));
         }
+        #endregion
     }
 }
