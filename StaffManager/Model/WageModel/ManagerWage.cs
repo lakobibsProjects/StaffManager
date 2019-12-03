@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace StaffManager.Model.WageModel
 {
+    /// <summary>
+    /// Calculation of wage employee with only first-level subordinates
+    /// </summary>
     public class ManagerWage : AbstractWage      //todo: rename
     {
         private double subordinatesRateIncrement;

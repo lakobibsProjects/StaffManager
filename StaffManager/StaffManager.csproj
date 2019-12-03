@@ -155,6 +155,7 @@
     <Compile Include="Model\EmployeeModel\Employee.cs" />
     <Compile Include="Model\EmployeeModel\EmployeeFactory.cs" />
     <Compile Include="Model\EmployeeModel\IEmployee.cs" />
+    <Compile Include="Model\PositionModel\Position.cs" />
     <Compile Include="Model\WageModel\AbstractWage.cs" />
     <Compile Include="Model\WageModel\EmployeeWage.cs" />
     <Compile Include="Model\WageModel\IWage.cs" />

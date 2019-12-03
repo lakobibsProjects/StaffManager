@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 
 namespace StaffManager.Model.EmployeeModel
 {
+    //вывести должность в отдельную сущность, сделать привязку через position_id
     /// <summary>
     /// General functionality for employee
     /// </summary>

@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace StaffManager.Model.WageModel
 {
+
+    /// <summary>
+    /// Calculation of wage employee with all-levels subordinates
+    /// </summary>
     public class SalesmanWage : AbstractWage       //todo: rename
     {
         private double subordinatesRateIncrement;

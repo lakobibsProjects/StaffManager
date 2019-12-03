@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace StaffManager.Model.WageModel
 {
-    public class EmployeeWage : AbstractWage      //todo: rename
+    /// <summary>
+    /// General calculation of wage
+    /// </summary>
+    public class EmployeeWage : AbstractWage      //todo: rename 
     {
         public EmployeeWage(IEmployee employee) : base(employee)
         {
