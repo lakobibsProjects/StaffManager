@@ -21,29 +21,24 @@ namespace StaffManager.Model.PositionModel
         #endregion
 
         #region Properties
-        [Column(Name = "ID", IsDbGenerated = true, IsPrimaryKey = true, DbType = "INTEGER")]
-        [Key]
         public int ID
         {
             get { return id; }
             set { id = value; }
         }
 
-        [Column(Name = "PositionName", DbType = "VARCHAR")]
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
 
-        [Column(Name = "Discription", DbType = "VARCHAR")]
         public string Discription
         {
             get { return discription; }
             set { discription = value; }
         }
 
-        [Column(Name = "Duties", DbType = "VARCHAR")]
         public string Duties
         {
             get { return duties; }

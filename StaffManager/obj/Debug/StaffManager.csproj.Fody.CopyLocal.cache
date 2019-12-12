@@ -94,8 +94,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\net461\lib\System.Xml.XmlSerializer.dll
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\net461\lib\System.Xml.XPath.dll
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\net461\lib\System.Xml.XPath.XDocument.dll
-C:\Projects\C#\StaffManager\StaffManager\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll
-C:\Projects\C#\StaffManager\StaffManager\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll
+C:\Projects\C#\StaffManager\StaffManager\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll
+C:\Projects\C#\StaffManager\StaffManager\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0-preview3.19551.4\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Bcl.HashCode.1.1.0-preview3.19551.4\lib\net461\Microsoft.Bcl.HashCode.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Caching.Abstractions.3.1.0-preview3.19553.2\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll
@@ -109,19 +109,21 @@ C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Logging.A
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Logging.3.1.0-preview3.19553.2\lib\netstandard2.0\Microsoft.Extensions.Logging.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Options.3.1.0-preview3.19553.2\lib\netstandard2.0\Microsoft.Extensions.Options.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Primitives.3.1.0-preview3.19553.2\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll
+C:\Projects\C#\StaffManager\StaffManager\packages\MySql.Data.6.10.9\lib\net452\MySql.Data.dll
+C:\Projects\C#\StaffManager\StaffManager\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Collections.Immutable.1.7.0-preview3.19551.4\lib\netstandard2.0\System.Collections.Immutable.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.ComponentModel.Annotations.4.7.0-preview3.19551.4\lib\net461\System.ComponentModel.Annotations.dll
+C:\Projects\C#\StaffManager\StaffManager\packages\System.Data.SqlClient.4.8.0\lib\net461\System.Data.SqlClient.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Data.SQLite.Core.1.0.112.0\lib\net46\System.Data.SQLite.dll
-C:\Projects\C#\StaffManager\StaffManager\packages\System.Data.SQLite.EF6.1.0.112.0\lib\net46\System.Data.SQLite.EF6.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Data.SQLite.Linq.1.0.112.0\lib\net46\System.Data.SQLite.Linq.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Diagnostics.DiagnosticSource.4.7.0-preview3.19551.4\lib\net46\System.Diagnostics.DiagnosticSource.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Runtime.CompilerServices.Unsafe.4.7.0-preview3.19551.4\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll
-C:\Projects\C#\StaffManager\StaffManager\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.xml
-C:\Projects\C#\StaffManager\StaffManager\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.xml
+C:\Projects\C#\StaffManager\StaffManager\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.xml
+C:\Projects\C#\StaffManager\StaffManager\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0-preview3.19551.4\lib\net461\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Bcl.HashCode.1.1.0-preview3.19551.4\lib\net461\Microsoft.Bcl.HashCode.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Caching.Abstractions.3.1.0-preview3.19553.2\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.xml
@@ -135,8 +137,10 @@ C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Logging.3
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Logging.Abstractions.3.1.0-preview3.19553.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Options.3.1.0-preview3.19553.2\lib\netstandard2.0\Microsoft.Extensions.Options.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\Microsoft.Extensions.Primitives.3.1.0-preview3.19553.2\lib\netstandard2.0\Microsoft.Extensions.Primitives.xml
+C:\Projects\C#\StaffManager\StaffManager\packages\MySql.Data.6.10.9\lib\net452\MySql.Data.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Collections.Immutable.1.7.0-preview3.19551.4\lib\netstandard2.0\System.Collections.Immutable.xml
+C:\Projects\C#\StaffManager\StaffManager\packages\System.Data.SqlClient.4.8.0\lib\net461\System.Data.SqlClient.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Data.SQLite.Core.1.0.112.0\lib\net46\System.Data.SQLite.xml
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Data.SQLite.Core.1.0.112.0\lib\net46\System.Data.SQLite.dll.config
 C:\Projects\C#\StaffManager\StaffManager\packages\System.Diagnostics.DiagnosticSource.4.7.0-preview3.19551.4\lib\net46\System.Diagnostics.DiagnosticSource.xml

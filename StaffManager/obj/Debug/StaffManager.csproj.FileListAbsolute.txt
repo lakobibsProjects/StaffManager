@@ -118,7 +118,6 @@ C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Buffers.d
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Collections.Immutable.dll
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Data.SQLite.dll
-C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Data.SQLite.EF6.dll
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Memory.dll
@@ -172,3 +171,9 @@ C:\Projects\C#\StaffManager\StaffManager\StaffManager\obj\Debug\StaffManager.csp
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\obj\Debug\StaffManager.exe
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\obj\Debug\StaffManager.pdb
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\obj\Debug\StaffManager.csprojAssemblyReference.cache
+C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Data.SqlClient.dll
+C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\System.Data.SqlClient.xml
+C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\MySql.Data.dll
+C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\MySql.Data.xml
+C:\Projects\C#\StaffManager\StaffManager\StaffManager\obj\Debug\StaffManager.Migrations.InitialMigration.resources

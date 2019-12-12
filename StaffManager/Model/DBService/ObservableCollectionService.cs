@@ -26,8 +26,8 @@ namespace StaffManager.Model.DBService
         {
             if (employees.Contains(chief) && employees.Contains(subordinate))
             {
-                employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().ChiefID = chief.Id;
-                employees.Where(e => e.Id == chief.Id).FirstOrDefault().SubordinatesID.Add(subordinate.Id);
+                employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().Chief.Id = chief.Id;
+                employees.Where(e => e.Id == chief.Id).FirstOrDefault().Subordinates.Add(subordinate);
             }
         }
 
@@ -40,8 +40,8 @@ namespace StaffManager.Model.DBService
         {
             if (employees.Contains(chief) && employees.Contains(subordinate))
             {
-                employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().ChiefID = chief.Id;
-                employees.Where(e => e.Id == chief.Id).FirstOrDefault().SubordinatesID.Add(subordinate.Id);
+                employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().Chief.Id = chief.Id;
+                employees.Where(e => e.Id == chief.Id).FirstOrDefault().Subordinates.Add(subordinate);
             }
         }
 
@@ -57,7 +57,7 @@ namespace StaffManager.Model.DBService
 
         public ObservableCollection<Employee> GetSubordinates(Employee employee)
         {
-            return new ObservableCollection<Employee>(employees.Where(e => e.ChiefID == employee.Id));
+            return new ObservableCollection<Employee>(employees.Where(e => e.Chief.Id == employee.Id));
         }
 
         public double GetSummaryWage()
@@ -69,8 +69,8 @@ namespace StaffManager.Model.DBService
         {
             if (employees.Contains(employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().Chief) && employees.Contains(subordinate))
             {
-                employees.Where(e => e.Id == subordinate.ChiefID).FirstOrDefault().SubordinatesID.Remove(subordinate.Id);
-                employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().ChiefID = -1;
+                employees.Where(e => e.Id == subordinate.Chief.Id).FirstOrDefault().Subordinates.Remove(subordinate);
+                employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().Chief.Id = -1;
             }
         }
 
@@ -86,8 +86,8 @@ namespace StaffManager.Model.DBService
         {
             if (employees.Contains(employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().Chief) && employees.Contains(subordinate))
             {
-                employees.Where(e => e.Id == subordinate.ChiefID).FirstOrDefault().SubordinatesID.Remove(subordinate.Id);
-                employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().ChiefID = -1;
+                employees.Where(e => e.Id == subordinate.Chief.Id).FirstOrDefault().Subordinates.Remove(subordinate);
+                employees.Where(e => e.Id == subordinate.Id).FirstOrDefault().Chief.Id = -1;
             }
         }
         #endregion

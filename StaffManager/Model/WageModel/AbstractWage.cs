@@ -9,10 +9,16 @@ namespace StaffManager.Model.WageModel
 {
     public abstract class AbstractWage : IWage
     {
+        #region Fields
         private IEmployee employee;
         private double rateIncrement;
         private double rateLimit;
+        private double subordinateBonus;
+        private bool haveSubordinateBonus;
+        private bool isSubordinateBonusAllLevels;
+        #endregion
 
+        public int Id { get; set; }
         /// <summary>
         /// Advancement of wage per year in percent
         /// </summary>
@@ -50,9 +56,55 @@ namespace StaffManager.Model.WageModel
             }
         }
 
+        public double SubordinateBonus
+        {
+            get { return subordinateBonus; }
+            protected set
+            {
+                if (value < 1 || value > 0)
+                {
+                    subordinateBonus = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Limit must been between 0 and 1");
+                }
+            }
+        }
+
+        public bool HaveSubordinateBonus
+        {
+            get { return haveSubordinateBonus; }
+            protected set
+            {
+                haveSubordinateBonus = value;
+            }
+        }
+
+        public bool IsSubordinateBonusAllLevels
+        {
+            get
+            {
+                if (haveSubordinateBonus == false)
+                    return false;
+
+                return isSubordinateBonusAllLevels;
+            }
+            protected set
+            {
+                if (haveSubordinateBonus == false)
+                    isSubordinateBonusAllLevels = false;
+
+                isSubordinateBonusAllLevels = value;
+            }
+        }
         public AbstractWage(IEmployee employee)
         {
             this.employee = employee;
+        }
+        public AbstractWage()
+        {
+
         }
 
 

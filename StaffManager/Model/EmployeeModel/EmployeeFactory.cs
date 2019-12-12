@@ -1,4 +1,5 @@
-﻿using StaffManager.Model.WageModel;
+﻿using StaffManager.Model.PositionModel;
+using StaffManager.Model.WageModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,9 +15,8 @@ namespace StaffManager.Model.EmployeeModel
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = false;
-            result.Position = "Employee";
-            result.WageType = "EmployeeWage";
-            //result.Wage = new EmployeeWage(result);
+            result.Position = new Position() { ID = 0, Name = "Employee" };
+            result.Wage = new Wage(result, 0.03, 0.3);
 
             return result;
         }
@@ -25,10 +25,9 @@ namespace StaffManager.Model.EmployeeModel
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = true;
-            result.Position = "Manager";
-            result.WageType = "ManagerWage";
-            //result.Wage = new ManagerWage(result);
-            result.SubordinatesID = new ObservableCollection<int>();
+            result.Position = new Position() { ID = 1, Name = "Manager" };
+            result.Wage = new Wage(result, 0.05, 0.4, true, false, 0.005);
+            result.Subordinates = new ObservableCollection<Employee>();
 
             return result;
         }
@@ -37,10 +36,9 @@ namespace StaffManager.Model.EmployeeModel
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = true;
-            result.Position = "Salesman";
-            result.WageType = "SalesmanWage";
-            //result.Wage = new SalesmanWage(result);
-            result.SubordinatesID = new ObservableCollection<int>();
+            result.Position = new Position() { ID = 2, Name = "Salesman" };
+            result.Wage = new Wage(result, 0.01, 0.35, true, true, 0.003);
+            result.Subordinates = new ObservableCollection<Employee>();
 
             return result;
         }

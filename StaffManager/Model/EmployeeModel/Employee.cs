@@ -13,10 +13,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StaffManager.Model.PositionModel;
 
 namespace StaffManager.Model.EmployeeModel
 {
-    //вывести должность в отдельную сущность, сделать привязку через position_id
     /// <summary>
     /// General functionality for employee
     /// </summary>
@@ -30,79 +30,47 @@ namespace StaffManager.Model.EmployeeModel
         private double generalRate;
         private IEmployee chief;
         ObservableCollection<Employee> subordinates;
-        private ObservableCollection<int> subordinatesID;
         #endregion Fields
 
         #region Properties
-        [Column(Name = "ID", IsDbGenerated = true, IsPrimaryKey = true, DbType = "INTEGER")]
-        [Key]
         public int Id { get; set; }
         /// <summary>
         /// Name of employee
         /// </summary>
-        [Column(Name = "EmployeeName", DbType = "VARCHAR")]
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
-        [Column(Name = "EmploymentDate", DbType = "VARCHAR")]
         public DateTime EmploymentDate
         {
             get { return employmentDate; }
             set { employmentDate = value; }
         }
-
-        [Column(Name = "Salary", DbType = "REAL")]
         public double GeneralRate
         {
             get { return generalRate; }
             protected set { generalRate = value; }
         }
-
         public IEmployee Chief
         {
             get { return chief; }
-            set { chief = value; }  //todo: change logic to make private or protected
-        }
-        //механизм для десериализации механизма расчета заработной платы
-        //механизм взаимодействия с интерфейсом IWage является недоработанным и трубет переработки
-        //todo: add logic to simple return numeric Wage
-        public IWage Wage
-        {
-            get
+            set
             {
-                switch (WageType)
+                if (value.CanBeChief)
                 {
-                    case "EmployeeWage":
-                        return new EmployeeWage(this);
-                    case "ManagerWage":
-                        return new ManagerWage(this);
-                    case "SalesmanWage":
-                        return new SalesmanWage(this);
-                    default:
-                        throw new ArgumentException("Unhandled type of Wage");
+                    chief = value;
+                    value.Subordinates.Add(this);
                 }
-            }
+                else
+                {
+                    throw new Exception("Target employee cannot have subordinates");
+                }
+            }  //todo: change logic to make private or protected
         }
-        [Column(Name = "WageType", DbType = "VARCHAR")]
-        public string WageType { get; set; }
-        //change later to enum
-        //упрощение. тип данных string сделан для улучшения взаимодействия с базой данных. 
-        //рекомендуется заменить либо на enum, либо на коллекцию должностей
-        [Column(Name = "Position", DbType = "VARCHAR")]
-        public string Position { get; set; }
-        [Column(Name = "ChiefID", DbType = "INTEGER")]
-        public int ChiefID { get; set; }
-        [Column(Name = "CanBeChief", DbType = "INTEGER")]
+        public Wage Wage { get; set; }
+        public Position Position { get; set; }
         public bool CanBeChief { get; set; } = false;
-        //public IWage WageType { get; set; }
-        [System.Data.Linq.Mapping.Association(Storage = "subordinates", OtherKey = "ChiefID")]
-        public ObservableCollection<int> SubordinatesID
-        {
-            get { return subordinatesID; }
-            set { subordinatesID = value; }
-        }
         public ObservableCollection<Employee> Subordinates { get { return subordinates; } set { subordinates = value; } }
 
         //add funcionality in future
@@ -134,70 +102,28 @@ namespace StaffManager.Model.EmployeeModel
 
         }
         #endregion Constructors
-        /*
-        /// <summary>
-        /// Add chief to employee
-        /// </summary>
-        /// <param name="chief">Chief of employee</param>
-        public void AddChief(IEmployee chief)    //слишком сильная зависимость от наследуемого класса
-        {
-            if (this.Chief == null)
-            {
-                if (chief.CanBeChief)
-                {
-                    this.Chief = chief;
-                }
-                else
-                {
-                    throw new Exception("Target employee cannot have subordinates");
-                }
-            }
-            else
-            {
-                throw new Exception("This employee have chief");
-            }
-        }
-        /// <summary>
-        /// Replace chief to employee or add new chief
-        /// </summary>
-        /// <param name="chief">Chief of employee</param>
-        public void ReplaceChief(IEmployee chief)    //слишком сильная зависимость от наследуемого класса
-        {
-            if (chief.CanBeChief)
-            {
-                this.Chief = chief;
-            }
-            else
-            {
-                throw new Exception("Target employee cannot have subordinates");
-            }
 
-        }
-        //упрощение. на данный момент реализована жесткая привязка к типу расчета заработной платы
-        public double getWage()
+        #region Methods
+        public double GetWage()
         {
-            switch (this.Position)
-            {
-                case "Employee":
-                    return new EmployeeWage(this).CalculateWage();
-                case "Manager":
-                    return new ManagerWage(this).CalculateWage();
-                case "Salesman":
-                    return new SalesmanWage(this).CalculateWage();
-                default:
-                    return this.GeneralRate;
-            }
+            return Wage.CalculateWage(this);
         }
-
         public void AddSubordinate(IEmployee employee)
         {
             if (this.CanBeChief)
-                employee.ReplaceChief(this);
+            {
+                employee.Chief = this;
+                Subordinates.Add(employee as Employee);
+            }
         }
-
-        public ObservableCollection<IEmployee> GetSubourdinates(IDBService db)
+        public void RemoveSubordinate(IEmployee employee)
         {
-            return db.GetSubordinates(this);
-        }*/
+            if (this.CanBeChief)
+            {
+                employee.Chief = null;
+                Subordinates.Remove(employee as Employee);
+            }
+        }
+        #endregion       
     }
 }

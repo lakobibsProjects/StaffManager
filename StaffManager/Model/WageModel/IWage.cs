@@ -11,6 +11,9 @@ namespace StaffManager.Model.WageModel
     {
         double RateIncrement { get; }
         double RateLimit { get; }
+        double SubordinateBonus { get; }
+        bool HaveSubordinateBonus { get; }
+        bool IsSubordinateBonusAllLevels { get; }
         double CalculateWage(IEmployee employee);
         double CalculateWage(IEmployee employee, DateTime beginDate, DateTime endDate);
     }
