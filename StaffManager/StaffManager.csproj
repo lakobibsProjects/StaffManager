@@ -180,9 +180,16 @@
     <Compile Include="Migrations\201912061445584_InitialMigration.Designer.cs">
       <DependentUpon>201912061445584_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912161535223_AddDefaultWagesAndPositions.cs" />
+    <Compile Include="Migrations\201912161535223_AddDefaultWagesAndPositions.Designer.cs">
+      <DependentUpon>201912161535223_AddDefaultWagesAndPositions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\DBService\EntityConfigurations\EmployeeConfiguration.cs" />
+    <Compile Include="Model\DBService\EntityConfigurations\WageConfiguration.cs" />
     <Compile Include="Model\DBService\IDBService.cs" />
     <Compile Include="Model\DBService\ObservableCollectionService.cs" />
+    <Compile Include="Model\DBService\PositionConfiguration.cs" />
     <Compile Include="Model\DBService\SQLiteConfiguration.cs" />
     <Compile Include="Model\DBService\SQLiteService.cs" />
     <Compile Include="Model\DBService\StaffContext.cs" />
@@ -233,6 +240,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201912061445584_InitialMigration.resx">
       <DependentUpon>201912061445584_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912161535223_AddDefaultWagesAndPositions.resx">
+      <DependentUpon>201912161535223_AddDefaultWagesAndPositions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

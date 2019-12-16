@@ -1,4 +1,5 @@
 ﻿using MySql.Data.Entity;
+using StaffManager.Model.DBService.EntityConfigurations;
 using StaffManager.Model.EmployeeModel;
 using StaffManager.Model.PositionModel;
 using StaffManager.Model.WageModel;
@@ -18,20 +19,15 @@ namespace StaffManager.Model.DBService
     public class StaffContext : DbContext
     {
         public StaffContext() : base("name=MySqlConnection")
-            //base(new SQLiteConnection()
-            //{
-            //    //упрощение. datasource содержит абсолютный путь. необходимо заменить на относительный
-            //    //проблема не может найти SQLite.interop.dll
-            //    ConnectionString = new SQLiteConnectionStringBuilder() { DataSource = "C:\\Projects\\C#\\StaffManager\\StaffManager\\StaffManager\\StaffManagerDB.db", ForeignKeys = true }.ConnectionString
-            //}, true)
         {
-            //Database.SetInitializer<StaffContext>(null);
+            
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
-
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new EmployeeConfiguration());
+            modelBuilder.Configurations.Add(new PositionConfiguration());
+            modelBuilder.Configurations.Add(new WageConfiguration());
+           
         } 
         
         public DbSet<Employee> Employees { get; set; }

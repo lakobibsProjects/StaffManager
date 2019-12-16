@@ -29,6 +29,8 @@ namespace StaffManager.Model.WageModel
             IsSubordinateBonusAllLevels = isSubordinateBonusAllLevels;
         }
 
+
+
         //не учитывает подчиненных
         public override double CalculateWage(double generalRate, double rateLimit, double rateIncriment, DateTime beginDate, DateTime endDate)
         {

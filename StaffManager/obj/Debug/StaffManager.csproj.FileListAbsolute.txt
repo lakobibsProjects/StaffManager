@@ -177,3 +177,4 @@ C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\MySql.Data.dll
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\MySql.Data.Entity.EF6.dll
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\bin\Debug\MySql.Data.xml
 C:\Projects\C#\StaffManager\StaffManager\StaffManager\obj\Debug\StaffManager.Migrations.InitialMigration.resources
+C:\Projects\C#\StaffManager\StaffManager\StaffManager\obj\Debug\StaffManager.Migrations.AddDefaultWagesAndPositions.resources
