@@ -10,20 +10,20 @@ using System.Threading.Tasks;
 
 namespace StaffManager.Model.EmployeeModel
 {
-    public interface IEmployee
+    public interface IEmployee : IEntity
     {
-        IEmployee Chief { get; set; }
+        //IEmployee Chief { get; set; }
         DateTime EmploymentDate { get; set; }
         double GeneralRate { get; }
-        int Id { get; set; }
         string Name { get; set; }
         Position Position { get; }
         bool CanBeChief { get; }
-        Wage Wage { get; }
+        Salary Salary { get; }
         ObservableCollection<Employee> Subordinates { get; set; }
+        int? ChiefId { get; set; }
 
-        void AddSubordinate(IEmployee employee);
+        //void AddSubordinate(IEmployee employee);
         double GetWage();
-        void RemoveSubordinate(IEmployee employee);
+        //void RemoveSubordinate(IEmployee employee);
     }
 }

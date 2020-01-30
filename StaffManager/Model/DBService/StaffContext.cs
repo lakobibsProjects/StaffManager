@@ -26,12 +26,12 @@ namespace StaffManager.Model.DBService
         {
             modelBuilder.Configurations.Add(new EmployeeConfiguration());
             modelBuilder.Configurations.Add(new PositionConfiguration());
-            modelBuilder.Configurations.Add(new WageConfiguration());
+            modelBuilder.Configurations.Add(new SalaryConfiguration());
            
         } 
         
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Position> Positions { get; set; }
-        public DbSet<Wage> WageTypes { get; set; }
+        public DbSet<Salary> SalaryTypes { get; set; }
     }
 }

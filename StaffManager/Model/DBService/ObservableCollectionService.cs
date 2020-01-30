@@ -62,7 +62,7 @@ namespace StaffManager.Model.DBService
 
         public double GetSummaryWage()
         {
-            return employees.Sum(e => e.Wage.CalculateWage(e));
+            return employees.Sum(e => e.Salary.CalculateSalary(e));
         }
 
         public void RemoveChief(Employee subordinate)

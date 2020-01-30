@@ -16,7 +16,7 @@ namespace StaffManager.ViewModel.Converters
             string WageString;
             try
             {
-                WageString = (value as Employee).Wage.CalculateWage(value as Employee).ToString();
+                WageString = (value as Employee).Salary.CalculateSalary(value as Employee).ToString();
                 return WageString;
             }
             catch

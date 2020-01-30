@@ -12,7 +12,11 @@ namespace StaffManager.Model.DBService.EntityConfigurations
     {
         public EmployeeConfiguration()
         {
+            //HasOptional<Employee>(c => c.Chief).WithMany(s => s.Subordinates).HasForeignKey(e => e.Id).WillCascadeOnDelete(false);
+            HasMany<Employee>(e => e.Subordinates).WithOptional(a => a.Chief).HasForeignKey(e => e.ChiefId).WillCascadeOnDelete(false);
+            Property(e => e.Name).IsUnicode(true);
             
         }
+
     }
 }

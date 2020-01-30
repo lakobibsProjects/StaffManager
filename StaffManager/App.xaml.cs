@@ -20,6 +20,7 @@ namespace StaffManager
             base.OnStartup(e);
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+
         }
     }
 }

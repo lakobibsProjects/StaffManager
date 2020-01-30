@@ -121,7 +121,7 @@ namespace StaffManager.Model.DBService
 
         public double GetSummaryWage()
         {
-            return context.Employees.Sum(e => e.Wage.CalculateWage(e));
+            return context.Employees.Sum(e => e.Salary.CalculateSalary(e));
         }
         #endregion
     }

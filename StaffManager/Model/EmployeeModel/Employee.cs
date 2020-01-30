@@ -28,8 +28,8 @@ namespace StaffManager.Model.EmployeeModel
         private string name;
         private DateTime employmentDate;
         private double generalRate;
-        private IEmployee chief;
-        ObservableCollection<Employee> subordinates;
+        private Employee chief;
+        ObservableCollection<Employee> subordinates = new ObservableCollection<Employee>();
         #endregion Fields
 
         #region Properties
@@ -50,9 +50,10 @@ namespace StaffManager.Model.EmployeeModel
         public double GeneralRate
         {
             get { return generalRate; }
-            protected set { generalRate = value; }
+            set { generalRate = value; }
         }
-        public IEmployee Chief
+        public int? ChiefId { get; set; }
+        public Employee Chief
         {
             get { return chief; }
             set
@@ -68,10 +69,10 @@ namespace StaffManager.Model.EmployeeModel
                 }
             }  //todo: change logic to make private or protected
         }
-        public Wage Wage { get; set; }
+        public Salary Salary { get; set; }
         public Position Position { get; set; }
         public bool CanBeChief { get; set; } = false;
-        public ObservableCollection<Employee> Subordinates { get { return subordinates; } set { subordinates = value; } }
+        public ObservableCollection<Employee> Subordinates { get { return CanBeChief? subordinates : null; } set { subordinates = value; } }
 
         //add funcionality in future
         /*
@@ -99,16 +100,15 @@ namespace StaffManager.Model.EmployeeModel
         /// </summary>
         public Employee()
         {
-
         }
         #endregion Constructors
 
         #region Methods
         public double GetWage()
         {
-            return Wage.CalculateWage(this);
+            return Salary.CalculateSalary(this);
         }
-        public void AddSubordinate(IEmployee employee)
+        public void AddSubordinate(Employee employee)
         {
             if (this.CanBeChief)
             {
@@ -116,7 +116,7 @@ namespace StaffManager.Model.EmployeeModel
                 Subordinates.Add(employee as Employee);
             }
         }
-        public void RemoveSubordinate(IEmployee employee)
+        public void RemoveSubordinate(Employee employee)
         {
             if (this.CanBeChief)
             {

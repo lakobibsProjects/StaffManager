@@ -11,7 +11,7 @@ namespace StaffManager.Model.PositionModel
 {
     [AddINotifyPropertyChangedInterface]
     [Table(Name = "Positions")]
-    public class Position
+    public class Position : IEntity
     {
         #region Fields
         private int id;
@@ -21,7 +21,7 @@ namespace StaffManager.Model.PositionModel
         #endregion
 
         #region Properties
-        public int ID
+        public int Id
         {
             get { return id; }
             set { id = value; }
