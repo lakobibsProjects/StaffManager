@@ -58,6 +58,9 @@ namespace StaffManager.Model.EmployeeModel
             get { return chief; }
             set
             {
+                if (value == null)
+                    return;
+
                 if (value.CanBeChief)
                 {
                     chief = value;
