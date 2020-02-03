@@ -17,7 +17,7 @@ namespace StaffManager.ViewModel
     public class AddEmployeeViewModel
     {
         #region Fields
-        private IDBService db;
+        private StaffContext db;
         private readonly DelegateCommand cancelCommand;
         private readonly DelegateCommand saveCommand;
         #endregion
@@ -39,7 +39,7 @@ namespace StaffManager.ViewModel
 
         public AddEmployeeViewModel()
         {
-            db = new ObservableCollectionService();
+            db = new StaffContext();
             EmoploymentDate = DateTime.Now;
 
             #region Commands
@@ -78,7 +78,7 @@ namespace StaffManager.ViewModel
 
             if (employee != null)
             {
-                db.AddEmployee(employee);
+                db.Employees.Add(employee);
             }
 
             OnCancel(obj);

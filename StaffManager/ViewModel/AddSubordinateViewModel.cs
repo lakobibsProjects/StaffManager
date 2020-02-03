@@ -17,7 +17,7 @@ namespace StaffManager.ViewModel
     public class AddSubordinateViewModel
     {
         #region Fields
-        private IDBService db;
+        private StaffContext db;
         private readonly DelegateCommand cancelCommand;
         private readonly DelegateCommand addCommand;
         private readonly DelegateCommand addAndCloseCommand;
@@ -38,9 +38,9 @@ namespace StaffManager.ViewModel
 
         public AddSubordinateViewModel()
         {
-            db = new ObservableCollectionService();
+            db = new StaffContext();
             //todo: except ChangedEmployee and chiefs all levels of ChangedEmployee
-            Chiefs = new ObservableCollection<Employee>(db.GetEmployees().Where(e => e.CanBeChief));
+            Chiefs = new ObservableCollection<Employee>(db.Employees.Where(e => e.CanBeChief));
 
             #region Commands
             addCommand = new DelegateCommand(OnAdd);
@@ -70,7 +70,7 @@ namespace StaffManager.ViewModel
         {
             if (StaffViewModel.ChangedEmployee.CanBeChief)
             {
-                db.AddSubordinate(StaffViewModel.ChangedEmployee, SelectedEmployee);
+                db.Employees.Where(e => e.Id == StaffViewModel.ChangedEmployee.Id).FirstOrDefault().Subordinates.Add(db.Employees.Where(e => e.Id == SelectedEmployee.Id).FirstOrDefault());
             }
         }
         #endregion
