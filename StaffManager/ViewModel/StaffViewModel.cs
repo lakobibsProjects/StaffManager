@@ -6,6 +6,7 @@ using StaffManager.ViewModel.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace StaffManager.ViewModel
         private readonly DelegateCommand addStuffCommand;
         private readonly DelegateCommand deleteStuffCommand;
         private readonly DelegateCommand exitCommand;
-        private IDBService db;
+        private StaffContext db;
         #endregion
 
         #region Properties
@@ -34,8 +35,8 @@ namespace StaffManager.ViewModel
         {
             get
             {
-                if (SelectedEmployee != null)
-                    return db.GetSubordinates(SelectedEmployee);
+                if (SelectedEmployee != null)                    
+                    return db.Employees.Where(e => e.Id == SelectedEmployee.Id).FirstOrDefault().Subordinates;
                 return null;
             }
         }
@@ -73,9 +74,9 @@ namespace StaffManager.ViewModel
         #region Constructors
         public StaffViewModel()
         {
-            db = new ObservableCollectionService();
-            Employees = db.GetEmployees();
-            TotalWage = db.GetSummaryWage();
+            db = new StaffContext();
+            Employees = new ObservableCollection<Employee>(db.Employees.ToList());
+            TotalWage = db.Employees.Sum(e => e.GetWage());
             #region Commands
             addChiefCommand = new DelegateCommand(OnAddChief);
             removeChiefCommand = new DelegateCommand(OnRemoveChief);
@@ -96,7 +97,7 @@ namespace StaffManager.ViewModel
 
         private void OnDeleteStuff(object obj)
         {
-            db.RemoveEmployee(SelectedEmployee);
+            db.Employees.Remove(SelectedEmployee);
             ActualizeCollection();
         }
 
@@ -137,7 +138,7 @@ namespace StaffManager.ViewModel
         {
             if (obj is Employee)
             {
-                db.RemoveChief(obj as Employee);
+                db.Employees.Where(e => e.Id == SelectedEmployee.Id).FirstOrDefault().Chief = null;
                 ActualizeCollection();
             }
         }
@@ -152,7 +153,7 @@ namespace StaffManager.ViewModel
 
         private void ActualizeCollection()
         {
-            Employees = db.GetEmployees();
+            Employees = new ObservableCollection<Employee>(db.Employees);
         }
     }
 }
