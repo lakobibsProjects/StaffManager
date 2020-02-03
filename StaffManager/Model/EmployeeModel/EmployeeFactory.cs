@@ -1,7 +1,10 @@
-﻿using StaffManager.Model.WageModel;
+﻿using StaffManager.Model.DBService;
+using StaffManager.Model.PositionModel;
+using StaffManager.Model.WageModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +13,13 @@ namespace StaffManager.Model.EmployeeModel
 {
     public class EmployeeFactory
     {
+        StaffContext context = new StaffContext();
         public Employee GeneralEmployee(string name, double salary, DateTime employmentDate)
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = false;
-            result.Position = "Employee";
-            result.WageType = "EmployeeWage";
-            //result.Wage = new EmployeeWage(result);
+            result.Position  = context.Positions.Find(0);
+            result.Salary = context.SalaryTypes.Find(0);
 
             return result;
         }
@@ -25,10 +28,9 @@ namespace StaffManager.Model.EmployeeModel
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = true;
-            result.Position = "Manager";
-            result.WageType = "ManagerWage";
-            //result.Wage = new ManagerWage(result);
-            result.SubordinatesID = new ObservableCollection<int>();
+            result.Position = context.Positions.Find(1);
+            result.Salary = context.SalaryTypes.Find(1);
+            result.Subordinates = new ObservableCollection<Employee>();
 
             return result;
         }
@@ -37,10 +39,9 @@ namespace StaffManager.Model.EmployeeModel
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = true;
-            result.Position = "Salesman";
-            result.WageType = "SalesmanWage";
-            //result.Wage = new SalesmanWage(result);
-            result.SubordinatesID = new ObservableCollection<int>();
+            result.Position = context.Positions.Find(2);
+            result.Salary = context.SalaryTypes.Find(2);
+            result.Subordinates = new ObservableCollection<Employee>();
 
             return result;
         }

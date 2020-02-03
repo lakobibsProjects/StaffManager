@@ -47,7 +47,7 @@ namespace StaffManager.ViewModel
             get
             {
                 if (SelectedEmployee != null)
-                    return SelectedEmployee.Wage.CalculateWage(SelectedEmployee);
+                    return SelectedEmployee.Salary.CalculateSalary(SelectedEmployee);
                 return 0;
             }
         }
@@ -56,7 +56,7 @@ namespace StaffManager.ViewModel
             get
             {
                 if (SelectedSubordinate != null)
-                    return SelectedSubordinate.Wage.CalculateWage(SelectedSubordinate);
+                    return SelectedSubordinate.Salary.CalculateSalary(SelectedSubordinate);
                 return 0;
             }
         }

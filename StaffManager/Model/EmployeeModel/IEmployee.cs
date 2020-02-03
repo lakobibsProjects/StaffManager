@@ -1,4 +1,5 @@
 ﻿using StaffManager.Model.DBService;
+using StaffManager.Model.PositionModel;
 using StaffManager.Model.WageModel;
 using System;
 using System.Collections.Generic;
@@ -9,25 +10,20 @@ using System.Threading.Tasks;
 
 namespace StaffManager.Model.EmployeeModel
 {
-    public interface IEmployee
+    public interface IEmployee : IEntity
     {
-        IEmployee Chief { get; set; }
+        //IEmployee Chief { get; set; }
         DateTime EmploymentDate { get; set; }
         double GeneralRate { get; }
-        int Id { get; set; }
         string Name { get; set; }
-        //change later to enum
-        string Position { get; }
-        int ChiefID { get; }
+        Position Position { get; }
         bool CanBeChief { get; }
-        IWage Wage { get; }
-        string WageType { get; set; }
+        Salary Salary { get; }
+        ObservableCollection<Employee> Subordinates { get; set; }
+        int? ChiefId { get; set; }
 
-        /*void AddChief(IEmployee chief);
-        void ReplaceChief(IEmployee chief);
-        double getWage();
-        ObservableCollection<IEmployee> Subordinates { get; set; }
-        ObservableCollection<IEmployee> GetSubourdinates(IDBService db);
-        void AddSubordinate(IEmployee employee);*/
+        //void AddSubordinate(IEmployee employee);
+        double GetWage();
+        //void RemoveSubordinate(IEmployee employee);
     }
 }

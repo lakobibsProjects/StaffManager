@@ -42,7 +42,7 @@ namespace StaffManager.Model.DBService
         {
             if (context.Employees.Contains(employee) && employee.CanBeChief)
             {
-                return new ObservableCollection<Employee>(context.Employees.Where(e => e.ChiefID == employee.Id));
+                return new ObservableCollection<Employee>(context.Employees.Where(e => e.Chief.Id == employee.Id));
             }
             else
             {
@@ -97,7 +97,7 @@ namespace StaffManager.Model.DBService
 
         public void RemoveChief(Employee subordinate)
         {
-            Employee Chief = context.Employees.Where(c => c.Id == subordinate.ChiefID).FirstOrDefault();
+            Employee Chief = context.Employees.Where(c => c.Id == subordinate.Chief.Id).FirstOrDefault();
 
             if (context.Employees.Contains(Chief) && Chief.CanBeChief && Chief.Subordinates.Contains(subordinate))
             {
@@ -121,7 +121,7 @@ namespace StaffManager.Model.DBService
 
         public double GetSummaryWage()
         {
-            return context.Employees.Sum(e => e.Wage.CalculateWage(e));
+            return context.Employees.Sum(e => e.Salary.CalculateSalary(e));
         }
         #endregion
     }

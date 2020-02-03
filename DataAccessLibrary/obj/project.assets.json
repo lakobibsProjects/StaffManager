@@ -1,0 +1,1303 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.0": {
+      "EntityFramework/6.4.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "Microsoft.Bcl/1.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.Build": "1.0.10"
+        },
+        "compile": {
+          "lib/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Bcl.Async/1.0.165": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.0.19"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Threading.Tasks.Extensions.dll": {},
+          "lib/net45/Microsoft.Threading.Tasks.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Threading.Tasks.Extensions.dll": {},
+          "lib/net45/Microsoft.Threading.Tasks.dll": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.10": {
+        "type": "package"
+      },
+      "Microsoft.Data.Sqlite/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "3.1.1",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.9": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NETCore.UniversalWindowsPlatform.props": {},
+          "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
+        }
+      },
+      "NETStandard.Library/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "PCLStorage/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.6",
+          "Microsoft.Bcl.Async": "1.0.165"
+        },
+        "compile": {
+          "lib/net45/PCLStorage.Abstractions.dll": {},
+          "lib/net45/PCLStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net45/PCLStorage.Abstractions.dll": {},
+          "lib/net45/PCLStorage.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.0.2",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/alpine-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/linux-arm/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-armel/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-armel"
+          },
+          "runtimes/linux-musl-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x86/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x86"
+          },
+          "runtimes/osx-x64/native/libe_sqlite3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
+          },
+          "runtimes/win-arm64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EntityFramework/6.4.0": {
+      "sha512": "7jDmcQ3jaN5G7ZJC7Ecq161zQBs/5LqRzBdZ/I4XfmSvOwteGgNjOi30kthFador4Qjo3qUU6iOB1H04GIXrpg==",
+      "type": "package",
+      "path": "entityframework/6.4.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/EntityFramework.DefaultItems.props",
+        "build/EntityFramework.props",
+        "build/EntityFramework.targets",
+        "build/Microsoft.Data.Entity.Build.Tasks.dll",
+        "build/netcoreapp3.0/EntityFramework.props",
+        "build/netcoreapp3.0/EntityFramework.targets",
+        "buildTransitive/EntityFramework.props",
+        "buildTransitive/EntityFramework.targets",
+        "buildTransitive/netcoreapp3.0/EntityFramework.props",
+        "buildTransitive/netcoreapp3.0/EntityFramework.targets",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "entityframework.6.4.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "lib/netstandard2.1/EntityFramework.SqlServer.dll",
+        "lib/netstandard2.1/EntityFramework.SqlServer.xml",
+        "lib/netstandard2.1/EntityFramework.dll",
+        "lib/netstandard2.1/EntityFramework.xml",
+        "tools/EntityFramework6.PS2.psd1",
+        "tools/EntityFramework6.PS2.psm1",
+        "tools/EntityFramework6.psd1",
+        "tools/EntityFramework6.psm1",
+        "tools/about_EntityFramework6.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/net40/any/ef6.exe",
+        "tools/net40/any/ef6.pdb",
+        "tools/net40/win-x86/ef6.exe",
+        "tools/net40/win-x86/ef6.pdb",
+        "tools/net45/any/ef6.exe",
+        "tools/net45/any/ef6.pdb",
+        "tools/net45/win-x86/ef6.exe",
+        "tools/net45/win-x86/ef6.pdb",
+        "tools/netcoreapp3.0/any/ef6.dll",
+        "tools/netcoreapp3.0/any/ef6.pdb",
+        "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
+      ]
+    },
+    "Microsoft.Bcl/1.1.6": {
+      "sha512": "gQU52SY/AyzDhJ2HWGD1ieEbZgofkyhMKtKVyF33FokHfmESXh+9F6E+CdZ6/XlXEQMa+fqBdXBrKQeuM8X9nA==",
+      "type": "package",
+      "path": "microsoft.bcl/1.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License-Stable.rtf",
+        "content/net45/_._",
+        "content/portable-net45+win8+wp8/_._",
+        "content/portable-net451+win81/_._",
+        "content/sl4/_._",
+        "content/sl5/_._",
+        "content/win8/_._",
+        "content/wp8/_._",
+        "lib/net40/System.IO.dll",
+        "lib/net40/System.IO.xml",
+        "lib/net40/System.Runtime.dll",
+        "lib/net40/System.Runtime.xml",
+        "lib/net40/System.Threading.Tasks.dll",
+        "lib/net40/System.Threading.Tasks.xml",
+        "lib/net40/ensureRedirect.xml",
+        "lib/net45/_._",
+        "lib/portable-net40+sl4+win8+wp71/System.IO.dll",
+        "lib/portable-net40+sl4+win8+wp71/System.IO.xml",
+        "lib/portable-net40+sl4+win8+wp71/System.Runtime.dll",
+        "lib/portable-net40+sl4+win8+wp71/System.Runtime.xml",
+        "lib/portable-net40+sl4+win8+wp71/System.Threading.Tasks.dll",
+        "lib/portable-net40+sl4+win8+wp71/System.Threading.Tasks.xml",
+        "lib/portable-net40+sl4+win8+wp71/ensureRedirect.xml",
+        "lib/portable-net40+sl4+win8+wp8/System.IO.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.IO.xml",
+        "lib/portable-net40+sl4+win8+wp8/System.Runtime.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.Runtime.xml",
+        "lib/portable-net40+sl4+win8+wp8/System.Threading.Tasks.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.Threading.Tasks.xml",
+        "lib/portable-net40+sl4+win8+wp8/ensureRedirect.xml",
+        "lib/portable-net40+sl4+win8/System.IO.dll",
+        "lib/portable-net40+sl4+win8/System.IO.xml",
+        "lib/portable-net40+sl4+win8/System.Runtime.dll",
+        "lib/portable-net40+sl4+win8/System.Runtime.xml",
+        "lib/portable-net40+sl4+win8/System.Threading.Tasks.dll",
+        "lib/portable-net40+sl4+win8/System.Threading.Tasks.xml",
+        "lib/portable-net40+sl4+win8/ensureRedirect.xml",
+        "lib/portable-net40+sl5+win8+wp8/System.IO.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.IO.xml",
+        "lib/portable-net40+sl5+win8+wp8/System.Runtime.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Runtime.xml",
+        "lib/portable-net40+sl5+win8+wp8/System.Threading.Tasks.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Threading.Tasks.xml",
+        "lib/portable-net40+sl5+win8+wp8/ensureRedirect.xml",
+        "lib/portable-net40+win8+wp8/System.IO.dll",
+        "lib/portable-net40+win8+wp8/System.IO.xml",
+        "lib/portable-net40+win8+wp8/System.Runtime.dll",
+        "lib/portable-net40+win8+wp8/System.Runtime.xml",
+        "lib/portable-net40+win8+wp8/System.Threading.Tasks.dll",
+        "lib/portable-net40+win8+wp8/System.Threading.Tasks.xml",
+        "lib/portable-net40+win8+wp8/ensureRedirect.xml",
+        "lib/portable-net40+win8/System.IO.dll",
+        "lib/portable-net40+win8/System.IO.xml",
+        "lib/portable-net40+win8/System.Runtime.dll",
+        "lib/portable-net40+win8/System.Runtime.xml",
+        "lib/portable-net40+win8/System.Threading.Tasks.dll",
+        "lib/portable-net40+win8/System.Threading.Tasks.xml",
+        "lib/portable-net40+win8/ensureRedirect.xml",
+        "lib/portable-net45+win8+wp8/_._",
+        "lib/portable-net451+win81/_._",
+        "lib/sl4-windowsphone71/System.IO.dll",
+        "lib/sl4-windowsphone71/System.IO.xml",
+        "lib/sl4-windowsphone71/System.Runtime.dll",
+        "lib/sl4-windowsphone71/System.Runtime.xml",
+        "lib/sl4-windowsphone71/System.Threading.Tasks.dll",
+        "lib/sl4-windowsphone71/System.Threading.Tasks.xml",
+        "lib/sl4-windowsphone71/ensureRedirect.xml",
+        "lib/sl4/System.IO.dll",
+        "lib/sl4/System.IO.xml",
+        "lib/sl4/System.Runtime.dll",
+        "lib/sl4/System.Runtime.xml",
+        "lib/sl4/System.Threading.Tasks.dll",
+        "lib/sl4/System.Threading.Tasks.xml",
+        "lib/sl5/System.IO.dll",
+        "lib/sl5/System.IO.xml",
+        "lib/sl5/System.Runtime.dll",
+        "lib/sl5/System.Runtime.xml",
+        "lib/sl5/System.Threading.Tasks.dll",
+        "lib/sl5/System.Threading.Tasks.xml",
+        "lib/win8/_._",
+        "lib/wp8/_._",
+        "microsoft.bcl.1.1.6.nupkg.sha512",
+        "microsoft.bcl.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.Async/1.0.165": {
+      "sha512": "LbWuEY3s7MeQROW8WH4vNKNR/6XhG+mCZsDdOlXygNsZzMX98dt2Z64WhOSL22dN9AK9m8dipnvoK+m3CujMuw==",
+      "type": "package",
+      "path": "microsoft.bcl.async/1.0.165",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License-Stable.rtf",
+        "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll",
+        "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.xml",
+        "lib/net40/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/net40/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/net40/Microsoft.Threading.Tasks.dll",
+        "lib/net40/Microsoft.Threading.Tasks.xml",
+        "lib/net45/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/net45/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/net45/Microsoft.Threading.Tasks.dll",
+        "lib/net45/Microsoft.Threading.Tasks.xml",
+        "lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.dll",
+        "lib/portable-net40+sl4+win8+wp71/Microsoft.Threading.Tasks.xml",
+        "lib/portable-net45+win8+wp8/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8/Microsoft.Threading.Tasks.dll",
+        "lib/portable-net45+win8+wp8/Microsoft.Threading.Tasks.xml",
+        "lib/portable-net45+win8/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8/Microsoft.Threading.Tasks.dll",
+        "lib/portable-net45+win8/Microsoft.Threading.Tasks.xml",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.dll",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.xml",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.dll",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.xml",
+        "lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.dll",
+        "lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.xml",
+        "lib/sl4/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/sl4/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/sl4/Microsoft.Threading.Tasks.dll",
+        "lib/sl4/Microsoft.Threading.Tasks.xml",
+        "lib/win8/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/win8/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/win8/Microsoft.Threading.Tasks.dll",
+        "lib/win8/Microsoft.Threading.Tasks.xml",
+        "lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.dll",
+        "lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.xml",
+        "lib/wp8/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/wp8/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/wp8/Microsoft.Threading.Tasks.dll",
+        "lib/wp8/Microsoft.Threading.Tasks.xml",
+        "microsoft.bcl.async.1.0.165.nupkg.sha512",
+        "microsoft.bcl.async.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.Build/1.0.10": {
+      "sha512": "JpazBBc/JT6o76Gx2q3mxJlGHfv2gK+GTzaJ+PZjf2XNGQOcajNU4PKJqc0udRwmPunZP5GrMhiWUuDVkabh+A==",
+      "type": "package",
+      "path": "microsoft.bcl.build/1.0.10",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License-Stable.rtf",
+        "content/net40/_._",
+        "content/netcore45/_._",
+        "content/portable-net40+win8+sl4+wp71/_._",
+        "content/sl4-windowsphone71/_._",
+        "content/sl4/_._",
+        "microsoft.bcl.build.1.0.10.nupkg.sha512",
+        "microsoft.bcl.build.nuspec",
+        "tools/Install.ps1",
+        "tools/Microsoft.Bcl.Build.Tasks.dll",
+        "tools/Microsoft.Bcl.Build.targets",
+        "tools/Uninstall.ps1"
+      ]
+    },
+    "Microsoft.Data.Sqlite/3.1.1": {
+      "sha512": "3psFTqACovneMEnKHDOTdBHWUtABTIwzFXdYlM13XwSqEyf6SlFWhQ+r28NzPmc1rI3Cl3gy02W0jwO5FFAdCg==",
+      "type": "package",
+      "path": "microsoft.data.sqlite/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/_._",
+        "microsoft.data.sqlite.3.1.1.nupkg.sha512",
+        "microsoft.data.sqlite.nuspec"
+      ]
+    },
+    "Microsoft.Data.Sqlite.Core/3.1.1": {
+      "sha512": "AuINVQClKLK3efVFs2YZHcAupwKI9jLDL8neO/NDbi0fFM+YgT7YbJOj/+YBlnuztcbfL1gfLex4DqNbkl2Lyg==",
+      "type": "package",
+      "path": "microsoft.data.sqlite.core/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
+        "microsoft.data.sqlite.core.3.1.1.nupkg.sha512",
+        "microsoft.data.sqlite.core.nuspec"
+      ]
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json"
+      ]
+    },
+    "Microsoft.NETCore.UniversalWindowsPlatform/6.2.9": {
+      "sha512": "QcNHcEvhO0bMhF1LW7Ebn1f6wrzvbkloRsZSrAZsGbAAqdhmfuZcD3VVeVCL8VWsBXRlhdb3+0Y7HLxvnMTpZA==",
+      "type": "package",
+      "path": "microsoft.netcore.universalwindowsplatform/6.2.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/Microsoft.NETCore.UniversalWindowsPlatform.props",
+        "build/Microsoft.NetCore.UniversalWindowsPlatform.targets",
+        "microsoft.netcore.universalwindowsplatform.6.2.9.nupkg.sha512",
+        "microsoft.netcore.universalwindowsplatform.nuspec",
+        "ref/netcore50/_._",
+        "ref/uap10.0.15138/Microsoft.CSharp.dll",
+        "ref/uap10.0.15138/Microsoft.CSharp.xml",
+        "ref/uap10.0.15138/Microsoft.VisualBasic.dll",
+        "ref/uap10.0.15138/Microsoft.VisualBasic.xml",
+        "ref/uap10.0.15138/Microsoft.Win32.Primitives.dll",
+        "ref/uap10.0.15138/Microsoft.Win32.Primitives.xml",
+        "ref/uap10.0.15138/System.AppContext.dll",
+        "ref/uap10.0.15138/System.AppContext.xml",
+        "ref/uap10.0.15138/System.Buffers.dll",
+        "ref/uap10.0.15138/System.Buffers.xml",
+        "ref/uap10.0.15138/System.Collections.Concurrent.dll",
+        "ref/uap10.0.15138/System.Collections.Concurrent.xml",
+        "ref/uap10.0.15138/System.Collections.Immutable.dll",
+        "ref/uap10.0.15138/System.Collections.Immutable.xml",
+        "ref/uap10.0.15138/System.Collections.NonGeneric.dll",
+        "ref/uap10.0.15138/System.Collections.NonGeneric.xml",
+        "ref/uap10.0.15138/System.Collections.Specialized.dll",
+        "ref/uap10.0.15138/System.Collections.Specialized.xml",
+        "ref/uap10.0.15138/System.Collections.dll",
+        "ref/uap10.0.15138/System.Collections.xml",
+        "ref/uap10.0.15138/System.ComponentModel.Annotations.dll",
+        "ref/uap10.0.15138/System.ComponentModel.Annotations.xml",
+        "ref/uap10.0.15138/System.ComponentModel.Composition.dll",
+        "ref/uap10.0.15138/System.ComponentModel.DataAnnotations.dll",
+        "ref/uap10.0.15138/System.ComponentModel.EventBasedAsync.dll",
+        "ref/uap10.0.15138/System.ComponentModel.EventBasedAsync.xml",
+        "ref/uap10.0.15138/System.ComponentModel.Primitives.dll",
+        "ref/uap10.0.15138/System.ComponentModel.Primitives.xml",
+        "ref/uap10.0.15138/System.ComponentModel.TypeConverter.dll",
+        "ref/uap10.0.15138/System.ComponentModel.TypeConverter.xml",
+        "ref/uap10.0.15138/System.ComponentModel.dll",
+        "ref/uap10.0.15138/System.ComponentModel.xml",
+        "ref/uap10.0.15138/System.Configuration.dll",
+        "ref/uap10.0.15138/System.Console.dll",
+        "ref/uap10.0.15138/System.Console.xml",
+        "ref/uap10.0.15138/System.Core.dll",
+        "ref/uap10.0.15138/System.Data.Common.dll",
+        "ref/uap10.0.15138/System.Data.Common.xml",
+        "ref/uap10.0.15138/System.Data.SqlClient.dll",
+        "ref/uap10.0.15138/System.Data.SqlClient.xml",
+        "ref/uap10.0.15138/System.Data.dll",
+        "ref/uap10.0.15138/System.Diagnostics.Contracts.dll",
+        "ref/uap10.0.15138/System.Diagnostics.Contracts.xml",
+        "ref/uap10.0.15138/System.Diagnostics.Debug.dll",
+        "ref/uap10.0.15138/System.Diagnostics.Debug.xml",
+        "ref/uap10.0.15138/System.Diagnostics.FileVersionInfo.dll",
+        "ref/uap10.0.15138/System.Diagnostics.FileVersionInfo.xml",
+        "ref/uap10.0.15138/System.Diagnostics.Process.dll",
+        "ref/uap10.0.15138/System.Diagnostics.Process.xml",
+        "ref/uap10.0.15138/System.Diagnostics.StackTrace.dll",
+        "ref/uap10.0.15138/System.Diagnostics.StackTrace.xml",
+        "ref/uap10.0.15138/System.Diagnostics.TextWriterTraceListener.dll",
+        "ref/uap10.0.15138/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/uap10.0.15138/System.Diagnostics.Tools.dll",
+        "ref/uap10.0.15138/System.Diagnostics.Tools.xml",
+        "ref/uap10.0.15138/System.Diagnostics.TraceSource.dll",
+        "ref/uap10.0.15138/System.Diagnostics.TraceSource.xml",
+        "ref/uap10.0.15138/System.Diagnostics.Tracing.dll",
+        "ref/uap10.0.15138/System.Diagnostics.Tracing.xml",
+        "ref/uap10.0.15138/System.Drawing.Primitives.dll",
+        "ref/uap10.0.15138/System.Drawing.Primitives.xml",
+        "ref/uap10.0.15138/System.Drawing.dll",
+        "ref/uap10.0.15138/System.Dynamic.Runtime.dll",
+        "ref/uap10.0.15138/System.Dynamic.Runtime.xml",
+        "ref/uap10.0.15138/System.Globalization.Calendars.dll",
+        "ref/uap10.0.15138/System.Globalization.Calendars.xml",
+        "ref/uap10.0.15138/System.Globalization.Extensions.dll",
+        "ref/uap10.0.15138/System.Globalization.Extensions.xml",
+        "ref/uap10.0.15138/System.Globalization.dll",
+        "ref/uap10.0.15138/System.Globalization.xml",
+        "ref/uap10.0.15138/System.IO.Compression.FileSystem.dll",
+        "ref/uap10.0.15138/System.IO.Compression.ZipFile.dll",
+        "ref/uap10.0.15138/System.IO.Compression.ZipFile.xml",
+        "ref/uap10.0.15138/System.IO.Compression.dll",
+        "ref/uap10.0.15138/System.IO.Compression.xml",
+        "ref/uap10.0.15138/System.IO.FileSystem.DriveInfo.dll",
+        "ref/uap10.0.15138/System.IO.FileSystem.DriveInfo.xml",
+        "ref/uap10.0.15138/System.IO.FileSystem.Primitives.dll",
+        "ref/uap10.0.15138/System.IO.FileSystem.Primitives.xml",
+        "ref/uap10.0.15138/System.IO.FileSystem.Watcher.dll",
+        "ref/uap10.0.15138/System.IO.FileSystem.Watcher.xml",
+        "ref/uap10.0.15138/System.IO.FileSystem.dll",
+        "ref/uap10.0.15138/System.IO.FileSystem.xml",
+        "ref/uap10.0.15138/System.IO.IsolatedStorage.dll",
+        "ref/uap10.0.15138/System.IO.IsolatedStorage.xml",
+        "ref/uap10.0.15138/System.IO.MemoryMappedFiles.dll",
+        "ref/uap10.0.15138/System.IO.MemoryMappedFiles.xml",
+        "ref/uap10.0.15138/System.IO.Pipes.dll",
+        "ref/uap10.0.15138/System.IO.Pipes.xml",
+        "ref/uap10.0.15138/System.IO.Ports.dll",
+        "ref/uap10.0.15138/System.IO.Ports.xml",
+        "ref/uap10.0.15138/System.IO.UnmanagedMemoryStream.dll",
+        "ref/uap10.0.15138/System.IO.UnmanagedMemoryStream.xml",
+        "ref/uap10.0.15138/System.IO.dll",
+        "ref/uap10.0.15138/System.IO.xml",
+        "ref/uap10.0.15138/System.Linq.Expressions.dll",
+        "ref/uap10.0.15138/System.Linq.Expressions.xml",
+        "ref/uap10.0.15138/System.Linq.Parallel.dll",
+        "ref/uap10.0.15138/System.Linq.Parallel.xml",
+        "ref/uap10.0.15138/System.Linq.Queryable.dll",
+        "ref/uap10.0.15138/System.Linq.Queryable.xml",
+        "ref/uap10.0.15138/System.Linq.dll",
+        "ref/uap10.0.15138/System.Linq.xml",
+        "ref/uap10.0.15138/System.Net.Http.Rtc.dll",
+        "ref/uap10.0.15138/System.Net.Http.Rtc.xml",
+        "ref/uap10.0.15138/System.Net.Http.dll",
+        "ref/uap10.0.15138/System.Net.Http.xml",
+        "ref/uap10.0.15138/System.Net.HttpListener.dll",
+        "ref/uap10.0.15138/System.Net.HttpListener.xml",
+        "ref/uap10.0.15138/System.Net.Mail.dll",
+        "ref/uap10.0.15138/System.Net.Mail.xml",
+        "ref/uap10.0.15138/System.Net.NameResolution.dll",
+        "ref/uap10.0.15138/System.Net.NameResolution.xml",
+        "ref/uap10.0.15138/System.Net.NetworkInformation.dll",
+        "ref/uap10.0.15138/System.Net.NetworkInformation.xml",
+        "ref/uap10.0.15138/System.Net.Ping.dll",
+        "ref/uap10.0.15138/System.Net.Ping.xml",
+        "ref/uap10.0.15138/System.Net.Primitives.dll",
+        "ref/uap10.0.15138/System.Net.Primitives.xml",
+        "ref/uap10.0.15138/System.Net.Requests.dll",
+        "ref/uap10.0.15138/System.Net.Requests.xml",
+        "ref/uap10.0.15138/System.Net.Security.dll",
+        "ref/uap10.0.15138/System.Net.Security.xml",
+        "ref/uap10.0.15138/System.Net.ServicePoint.dll",
+        "ref/uap10.0.15138/System.Net.ServicePoint.xml",
+        "ref/uap10.0.15138/System.Net.Sockets.dll",
+        "ref/uap10.0.15138/System.Net.Sockets.xml",
+        "ref/uap10.0.15138/System.Net.WebClient.dll",
+        "ref/uap10.0.15138/System.Net.WebClient.xml",
+        "ref/uap10.0.15138/System.Net.WebHeaderCollection.dll",
+        "ref/uap10.0.15138/System.Net.WebHeaderCollection.xml",
+        "ref/uap10.0.15138/System.Net.WebProxy.dll",
+        "ref/uap10.0.15138/System.Net.WebProxy.xml",
+        "ref/uap10.0.15138/System.Net.WebSockets.Client.dll",
+        "ref/uap10.0.15138/System.Net.WebSockets.Client.xml",
+        "ref/uap10.0.15138/System.Net.WebSockets.dll",
+        "ref/uap10.0.15138/System.Net.WebSockets.xml",
+        "ref/uap10.0.15138/System.Net.dll",
+        "ref/uap10.0.15138/System.Numerics.Vectors.WindowsRuntime.dll",
+        "ref/uap10.0.15138/System.Numerics.Vectors.dll",
+        "ref/uap10.0.15138/System.Numerics.Vectors.xml",
+        "ref/uap10.0.15138/System.Numerics.dll",
+        "ref/uap10.0.15138/System.ObjectModel.dll",
+        "ref/uap10.0.15138/System.ObjectModel.xml",
+        "ref/uap10.0.15138/System.Reflection.Context.dll",
+        "ref/uap10.0.15138/System.Reflection.Context.xml",
+        "ref/uap10.0.15138/System.Reflection.DispatchProxy.dll",
+        "ref/uap10.0.15138/System.Reflection.DispatchProxy.xml",
+        "ref/uap10.0.15138/System.Reflection.Extensions.dll",
+        "ref/uap10.0.15138/System.Reflection.Extensions.xml",
+        "ref/uap10.0.15138/System.Reflection.Metadata.dll",
+        "ref/uap10.0.15138/System.Reflection.Metadata.xml",
+        "ref/uap10.0.15138/System.Reflection.Primitives.dll",
+        "ref/uap10.0.15138/System.Reflection.Primitives.xml",
+        "ref/uap10.0.15138/System.Reflection.TypeExtensions.dll",
+        "ref/uap10.0.15138/System.Reflection.TypeExtensions.xml",
+        "ref/uap10.0.15138/System.Reflection.dll",
+        "ref/uap10.0.15138/System.Reflection.xml",
+        "ref/uap10.0.15138/System.Resources.Reader.dll",
+        "ref/uap10.0.15138/System.Resources.Reader.xml",
+        "ref/uap10.0.15138/System.Resources.ResourceManager.dll",
+        "ref/uap10.0.15138/System.Resources.ResourceManager.xml",
+        "ref/uap10.0.15138/System.Resources.Writer.dll",
+        "ref/uap10.0.15138/System.Resources.Writer.xml",
+        "ref/uap10.0.15138/System.Runtime.CompilerServices.VisualC.dll",
+        "ref/uap10.0.15138/System.Runtime.CompilerServices.VisualC.xml",
+        "ref/uap10.0.15138/System.Runtime.Extensions.dll",
+        "ref/uap10.0.15138/System.Runtime.Extensions.xml",
+        "ref/uap10.0.15138/System.Runtime.Handles.dll",
+        "ref/uap10.0.15138/System.Runtime.Handles.xml",
+        "ref/uap10.0.15138/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "ref/uap10.0.15138/System.Runtime.InteropServices.RuntimeInformation.xml",
+        "ref/uap10.0.15138/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/uap10.0.15138/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/uap10.0.15138/System.Runtime.InteropServices.dll",
+        "ref/uap10.0.15138/System.Runtime.InteropServices.xml",
+        "ref/uap10.0.15138/System.Runtime.Numerics.dll",
+        "ref/uap10.0.15138/System.Runtime.Numerics.xml",
+        "ref/uap10.0.15138/System.Runtime.Serialization.Formatters.dll",
+        "ref/uap10.0.15138/System.Runtime.Serialization.Formatters.xml",
+        "ref/uap10.0.15138/System.Runtime.Serialization.Json.dll",
+        "ref/uap10.0.15138/System.Runtime.Serialization.Json.xml",
+        "ref/uap10.0.15138/System.Runtime.Serialization.Primitives.dll",
+        "ref/uap10.0.15138/System.Runtime.Serialization.Primitives.xml",
+        "ref/uap10.0.15138/System.Runtime.Serialization.Xml.dll",
+        "ref/uap10.0.15138/System.Runtime.Serialization.Xml.xml",
+        "ref/uap10.0.15138/System.Runtime.Serialization.dll",
+        "ref/uap10.0.15138/System.Runtime.WindowsRuntime.UI.Xaml.dll",
+        "ref/uap10.0.15138/System.Runtime.WindowsRuntime.dll",
+        "ref/uap10.0.15138/System.Runtime.dll",
+        "ref/uap10.0.15138/System.Runtime.xml",
+        "ref/uap10.0.15138/System.Security.AccessControl.dll",
+        "ref/uap10.0.15138/System.Security.AccessControl.xml",
+        "ref/uap10.0.15138/System.Security.Claims.dll",
+        "ref/uap10.0.15138/System.Security.Claims.xml",
+        "ref/uap10.0.15138/System.Security.Cryptography.Algorithms.dll",
+        "ref/uap10.0.15138/System.Security.Cryptography.Algorithms.xml",
+        "ref/uap10.0.15138/System.Security.Cryptography.Cng.dll",
+        "ref/uap10.0.15138/System.Security.Cryptography.Cng.xml",
+        "ref/uap10.0.15138/System.Security.Cryptography.Csp.dll",
+        "ref/uap10.0.15138/System.Security.Cryptography.Csp.xml",
+        "ref/uap10.0.15138/System.Security.Cryptography.Encoding.dll",
+        "ref/uap10.0.15138/System.Security.Cryptography.Encoding.xml",
+        "ref/uap10.0.15138/System.Security.Cryptography.Primitives.dll",
+        "ref/uap10.0.15138/System.Security.Cryptography.Primitives.xml",
+        "ref/uap10.0.15138/System.Security.Cryptography.X509Certificates.dll",
+        "ref/uap10.0.15138/System.Security.Cryptography.X509Certificates.xml",
+        "ref/uap10.0.15138/System.Security.Principal.Windows.dll",
+        "ref/uap10.0.15138/System.Security.Principal.Windows.xml",
+        "ref/uap10.0.15138/System.Security.Principal.dll",
+        "ref/uap10.0.15138/System.Security.Principal.xml",
+        "ref/uap10.0.15138/System.Security.SecureString.dll",
+        "ref/uap10.0.15138/System.Security.SecureString.xml",
+        "ref/uap10.0.15138/System.Security.dll",
+        "ref/uap10.0.15138/System.ServiceModel.Duplex.dll",
+        "ref/uap10.0.15138/System.ServiceModel.Http.dll",
+        "ref/uap10.0.15138/System.ServiceModel.NetTcp.dll",
+        "ref/uap10.0.15138/System.ServiceModel.Primitives.dll",
+        "ref/uap10.0.15138/System.ServiceModel.Security.dll",
+        "ref/uap10.0.15138/System.ServiceModel.Web.dll",
+        "ref/uap10.0.15138/System.ServiceModel.dll",
+        "ref/uap10.0.15138/System.ServiceProcess.dll",
+        "ref/uap10.0.15138/System.Text.Encoding.CodePages.dll",
+        "ref/uap10.0.15138/System.Text.Encoding.CodePages.xml",
+        "ref/uap10.0.15138/System.Text.Encoding.Extensions.dll",
+        "ref/uap10.0.15138/System.Text.Encoding.Extensions.xml",
+        "ref/uap10.0.15138/System.Text.Encoding.dll",
+        "ref/uap10.0.15138/System.Text.Encoding.xml",
+        "ref/uap10.0.15138/System.Text.RegularExpressions.dll",
+        "ref/uap10.0.15138/System.Text.RegularExpressions.xml",
+        "ref/uap10.0.15138/System.Threading.Overlapped.dll",
+        "ref/uap10.0.15138/System.Threading.Overlapped.xml",
+        "ref/uap10.0.15138/System.Threading.Tasks.Dataflow.dll",
+        "ref/uap10.0.15138/System.Threading.Tasks.Dataflow.xml",
+        "ref/uap10.0.15138/System.Threading.Tasks.Parallel.dll",
+        "ref/uap10.0.15138/System.Threading.Tasks.Parallel.xml",
+        "ref/uap10.0.15138/System.Threading.Tasks.dll",
+        "ref/uap10.0.15138/System.Threading.Tasks.xml",
+        "ref/uap10.0.15138/System.Threading.Thread.dll",
+        "ref/uap10.0.15138/System.Threading.Thread.xml",
+        "ref/uap10.0.15138/System.Threading.ThreadPool.dll",
+        "ref/uap10.0.15138/System.Threading.ThreadPool.xml",
+        "ref/uap10.0.15138/System.Threading.Timer.dll",
+        "ref/uap10.0.15138/System.Threading.Timer.xml",
+        "ref/uap10.0.15138/System.Threading.dll",
+        "ref/uap10.0.15138/System.Threading.xml",
+        "ref/uap10.0.15138/System.Transactions.Local.dll",
+        "ref/uap10.0.15138/System.Transactions.Local.xml",
+        "ref/uap10.0.15138/System.Transactions.dll",
+        "ref/uap10.0.15138/System.ValueTuple.dll",
+        "ref/uap10.0.15138/System.ValueTuple.xml",
+        "ref/uap10.0.15138/System.Web.HttpUtility.dll",
+        "ref/uap10.0.15138/System.Web.HttpUtility.xml",
+        "ref/uap10.0.15138/System.Web.dll",
+        "ref/uap10.0.15138/System.Windows.dll",
+        "ref/uap10.0.15138/System.Xml.Linq.dll",
+        "ref/uap10.0.15138/System.Xml.ReaderWriter.dll",
+        "ref/uap10.0.15138/System.Xml.ReaderWriter.xml",
+        "ref/uap10.0.15138/System.Xml.Serialization.dll",
+        "ref/uap10.0.15138/System.Xml.XDocument.dll",
+        "ref/uap10.0.15138/System.Xml.XDocument.xml",
+        "ref/uap10.0.15138/System.Xml.XPath.XDocument.dll",
+        "ref/uap10.0.15138/System.Xml.XPath.XDocument.xml",
+        "ref/uap10.0.15138/System.Xml.XPath.dll",
+        "ref/uap10.0.15138/System.Xml.XPath.xml",
+        "ref/uap10.0.15138/System.Xml.XmlDocument.dll",
+        "ref/uap10.0.15138/System.Xml.XmlDocument.xml",
+        "ref/uap10.0.15138/System.Xml.XmlSerializer.dll",
+        "ref/uap10.0.15138/System.Xml.XmlSerializer.xml",
+        "ref/uap10.0.15138/System.Xml.dll",
+        "ref/uap10.0.15138/System.dll",
+        "ref/uap10.0.15138/WindowsBase.dll",
+        "ref/uap10.0.15138/mscorlib.dll",
+        "ref/uap10.0.15138/netstandard.dll",
+        "runtime.json"
+      ]
+    },
+    "NETStandard.Library/2.0.3": {
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "type": "package",
+      "path": "netstandard.library/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/netstandard2.0/NETStandard.Library.targets",
+        "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
+        "build/netstandard2.0/ref/System.AppContext.dll",
+        "build/netstandard2.0/ref/System.Collections.Concurrent.dll",
+        "build/netstandard2.0/ref/System.Collections.NonGeneric.dll",
+        "build/netstandard2.0/ref/System.Collections.Specialized.dll",
+        "build/netstandard2.0/ref/System.Collections.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Composition.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.EventBasedAsync.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Primitives.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.TypeConverter.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.dll",
+        "build/netstandard2.0/ref/System.Console.dll",
+        "build/netstandard2.0/ref/System.Core.dll",
+        "build/netstandard2.0/ref/System.Data.Common.dll",
+        "build/netstandard2.0/ref/System.Data.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Contracts.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Debug.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.FileVersionInfo.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Process.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.StackTrace.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TextWriterTraceListener.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tools.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TraceSource.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tracing.dll",
+        "build/netstandard2.0/ref/System.Drawing.Primitives.dll",
+        "build/netstandard2.0/ref/System.Drawing.dll",
+        "build/netstandard2.0/ref/System.Dynamic.Runtime.dll",
+        "build/netstandard2.0/ref/System.Globalization.Calendars.dll",
+        "build/netstandard2.0/ref/System.Globalization.Extensions.dll",
+        "build/netstandard2.0/ref/System.Globalization.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.ZipFile.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.DriveInfo.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Watcher.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.IsolatedStorage.dll",
+        "build/netstandard2.0/ref/System.IO.MemoryMappedFiles.dll",
+        "build/netstandard2.0/ref/System.IO.Pipes.dll",
+        "build/netstandard2.0/ref/System.IO.UnmanagedMemoryStream.dll",
+        "build/netstandard2.0/ref/System.IO.dll",
+        "build/netstandard2.0/ref/System.Linq.Expressions.dll",
+        "build/netstandard2.0/ref/System.Linq.Parallel.dll",
+        "build/netstandard2.0/ref/System.Linq.Queryable.dll",
+        "build/netstandard2.0/ref/System.Linq.dll",
+        "build/netstandard2.0/ref/System.Net.Http.dll",
+        "build/netstandard2.0/ref/System.Net.NameResolution.dll",
+        "build/netstandard2.0/ref/System.Net.NetworkInformation.dll",
+        "build/netstandard2.0/ref/System.Net.Ping.dll",
+        "build/netstandard2.0/ref/System.Net.Primitives.dll",
+        "build/netstandard2.0/ref/System.Net.Requests.dll",
+        "build/netstandard2.0/ref/System.Net.Security.dll",
+        "build/netstandard2.0/ref/System.Net.Sockets.dll",
+        "build/netstandard2.0/ref/System.Net.WebHeaderCollection.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.Client.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.dll",
+        "build/netstandard2.0/ref/System.Net.dll",
+        "build/netstandard2.0/ref/System.Numerics.dll",
+        "build/netstandard2.0/ref/System.ObjectModel.dll",
+        "build/netstandard2.0/ref/System.Reflection.Extensions.dll",
+        "build/netstandard2.0/ref/System.Reflection.Primitives.dll",
+        "build/netstandard2.0/ref/System.Reflection.dll",
+        "build/netstandard2.0/ref/System.Resources.Reader.dll",
+        "build/netstandard2.0/ref/System.Resources.ResourceManager.dll",
+        "build/netstandard2.0/ref/System.Resources.Writer.dll",
+        "build/netstandard2.0/ref/System.Runtime.CompilerServices.VisualC.dll",
+        "build/netstandard2.0/ref/System.Runtime.Extensions.dll",
+        "build/netstandard2.0/ref/System.Runtime.Handles.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.dll",
+        "build/netstandard2.0/ref/System.Runtime.Numerics.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Formatters.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Json.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Primitives.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Xml.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.dll",
+        "build/netstandard2.0/ref/System.Runtime.dll",
+        "build/netstandard2.0/ref/System.Security.Claims.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Algorithms.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Csp.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Encoding.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Primitives.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.X509Certificates.dll",
+        "build/netstandard2.0/ref/System.Security.Principal.dll",
+        "build/netstandard2.0/ref/System.Security.SecureString.dll",
+        "build/netstandard2.0/ref/System.ServiceModel.Web.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.Extensions.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.dll",
+        "build/netstandard2.0/ref/System.Text.RegularExpressions.dll",
+        "build/netstandard2.0/ref/System.Threading.Overlapped.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.Parallel.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.dll",
+        "build/netstandard2.0/ref/System.Threading.Thread.dll",
+        "build/netstandard2.0/ref/System.Threading.ThreadPool.dll",
+        "build/netstandard2.0/ref/System.Threading.Timer.dll",
+        "build/netstandard2.0/ref/System.Threading.dll",
+        "build/netstandard2.0/ref/System.Transactions.dll",
+        "build/netstandard2.0/ref/System.ValueTuple.dll",
+        "build/netstandard2.0/ref/System.Web.dll",
+        "build/netstandard2.0/ref/System.Windows.dll",
+        "build/netstandard2.0/ref/System.Xml.Linq.dll",
+        "build/netstandard2.0/ref/System.Xml.ReaderWriter.dll",
+        "build/netstandard2.0/ref/System.Xml.Serialization.dll",
+        "build/netstandard2.0/ref/System.Xml.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlSerializer.dll",
+        "build/netstandard2.0/ref/System.Xml.dll",
+        "build/netstandard2.0/ref/System.dll",
+        "build/netstandard2.0/ref/mscorlib.dll",
+        "build/netstandard2.0/ref/netstandard.dll",
+        "build/netstandard2.0/ref/netstandard.xml",
+        "lib/netstandard1.0/_._",
+        "netstandard.library.2.0.3.nupkg.sha512",
+        "netstandard.library.nuspec"
+      ]
+    },
+    "PCLStorage/1.0.2": {
+      "sha512": "9If+1ZFCk3QaT/asfiL+J9FMnx2CTMrLCU8tDMUOI/aCGWGWl9vJ1/KcMkjf92op23ZknenvYJZBLDAqE3sFlg==",
+      "type": "package",
+      "path": "pclstorage/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid/PCLStorage.Abstractions.dll",
+        "lib/monoandroid/PCLStorage.Abstractions.xml",
+        "lib/monoandroid/PCLStorage.dll",
+        "lib/monoandroid/PCLStorage.xml",
+        "lib/monotouch/PCLStorage.Abstractions.dll",
+        "lib/monotouch/PCLStorage.Abstractions.xml",
+        "lib/monotouch/PCLStorage.dll",
+        "lib/monotouch/PCLStorage.xml",
+        "lib/net45/PCLStorage.Abstractions.dll",
+        "lib/net45/PCLStorage.Abstractions.xml",
+        "lib/net45/PCLStorage.dll",
+        "lib/net45/PCLStorage.xml",
+        "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll",
+        "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.xml",
+        "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll",
+        "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.xml",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.xml",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.dll",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.xml",
+        "lib/portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.dll",
+        "lib/portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac/PCLStorage.xml",
+        "lib/portable-win8+wpa81/PCLStorage.Abstractions.dll",
+        "lib/portable-win8+wpa81/PCLStorage.Abstractions.xml",
+        "lib/portable-win8+wpa81/PCLStorage.dll",
+        "lib/portable-win8+wpa81/PCLStorage.xml",
+        "lib/sl5/PCLStorage.Abstractions.dll",
+        "lib/sl5/PCLStorage.Abstractions.xml",
+        "lib/sl5/PCLStorage.dll",
+        "lib/sl5/PCLStorage.xml",
+        "lib/wp8/PCLStorage.Abstractions.dll",
+        "lib/wp8/PCLStorage.Abstractions.xml",
+        "lib/wp8/PCLStorage.dll",
+        "lib/wp8/PCLStorage.xml",
+        "pclstorage.1.0.2.nupkg.sha512",
+        "pclstorage.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+      "sha512": "OVPI/nh5AqfLCIKhAYqjCa6AHhc7oKApGcGM3UhMRSerFiBx58nSpGwxVFdMgjOCWZR+fA49nzsnKlWp5hFo8w==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.tvOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netcoreapp3.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp3.0/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
+        "sqlitepclraw.bundle_e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/2.0.2": {
+      "sha512": "TFSBX426OelS1tkaVC254NVVlrJIe9YLhWPkEvuqJj2104QpmDmEYOhfdfDJD1E/2SmqDhoRw1ek5cQHj8olcQ==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.2.0.2.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+      "sha512": "S+Tsqe/M7wsc+9HeediI6UHtBKf2X586aRwhi1aBVLGe0WxkAo52O9ZxwEy/v8XMLefcrEMupd2e9CDlIT6QCw==",
+      "type": "package",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net461/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "lib/net461/_._",
+        "lib/netstandard2.0/_._",
+        "runtimes/alpine-x64/native/libe_sqlite3.so",
+        "runtimes/linux-arm/native/libe_sqlite3.so",
+        "runtimes/linux-arm64/native/libe_sqlite3.so",
+        "runtimes/linux-armel/native/libe_sqlite3.so",
+        "runtimes/linux-musl-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x86/native/libe_sqlite3.so",
+        "runtimes/osx-x64/native/libe_sqlite3.dylib",
+        "runtimes/win-arm/native/e_sqlite3.dll",
+        "runtimes/win-arm64/native/e_sqlite3.dll",
+        "runtimes/win-x64/native/e_sqlite3.dll",
+        "runtimes/win-x86/native/e_sqlite3.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/e_sqlite3.dll",
+        "sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.e_sqlite3/2.0.2": {
+      "sha512": "i85nt+PE5q+85jDDKos+32MyCyPIBjW09DHhTJm8Tr2lXjRza+zBB3/1ovBbHgZP8o/fXzqNwB8bZsRzEtzk4Q==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "sqlitepclraw.provider.e_sqlite3.2.0.2.nupkg.sha512",
+        "sqlitepclraw.provider.e_sqlite3.nuspec"
+      ]
+    },
+    "System.Buffers/4.4.0": {
+      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "type": "package",
+      "path": "system.buffers/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.4.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.4.0": {
+      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.4.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.0": [
+      "EntityFramework >= 6.4.0",
+      "Microsoft.Data.Sqlite >= 3.1.1",
+      "Microsoft.Data.Sqlite.Core >= 3.1.1",
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.9",
+      "NETStandard.Library >= 2.0.3",
+      "PCLStorage >= 1.0.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\lakobib\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Projects\\C#\\StaffManager\\StaffManager\\DataAccessLibrary\\DataAccessLibrary.csproj",
+      "projectName": "DataAccessLibrary",
+      "projectPath": "C:\\Projects\\C#\\StaffManager\\StaffManager\\DataAccessLibrary\\DataAccessLibrary.csproj",
+      "packagesPath": "C:\\Users\\lakobib\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\C#\\StaffManager\\StaffManager\\DataAccessLibrary\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\lakobib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.0": {
+        "dependencies": {
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[6.4.0, )"
+          },
+          "Microsoft.Data.Sqlite": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "Microsoft.Data.Sqlite.Core": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "Microsoft.NETCore.UniversalWindowsPlatform": {
+            "target": "Package",
+            "version": "[6.2.9, )"
+          },
+          "NETStandard.Library": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.0.3, )",
+            "autoReferenced": true
+          },
+          "PCLStorage": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Bcl 1.1.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Bcl",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Bcl.Async 1.0.165' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Bcl.Async",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PCLStorage 1.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PCLStorage",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

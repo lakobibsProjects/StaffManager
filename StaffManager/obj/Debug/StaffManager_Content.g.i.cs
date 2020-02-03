@@ -9,7 +9,13 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("staffmanagerdb.db")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("windows.storage.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/sqlite.interop.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/sqlite.interop.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("e_sqlite3.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("e_sqlite3.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("e_sqlite3.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("e_sqlite3.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("e_sqlite3.dll")]
 
 

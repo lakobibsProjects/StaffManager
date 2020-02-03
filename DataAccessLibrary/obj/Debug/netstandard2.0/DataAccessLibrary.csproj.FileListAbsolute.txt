@@ -1,0 +1,5 @@
+C:\Projects\C#\StaffManager\StaffManager\DataAccessLibrary\bin\Debug\netstandard2.0\DataAccessLibrary.deps.json
+C:\Projects\C#\StaffManager\StaffManager\DataAccessLibrary\bin\Debug\netstandard2.0\DataAccessLibrary.dll
+C:\Projects\C#\StaffManager\StaffManager\DataAccessLibrary\obj\Debug\netstandard2.0\DataAccessLibrary.csprojAssemblyReference.cache
+C:\Projects\C#\StaffManager\StaffManager\DataAccessLibrary\obj\Debug\netstandard2.0\DataAccessLibrary.AssemblyInfoInputs.cache
+C:\Projects\C#\StaffManager\StaffManager\DataAccessLibrary\obj\Debug\netstandard2.0\DataAccessLibrary.AssemblyInfo.cs
