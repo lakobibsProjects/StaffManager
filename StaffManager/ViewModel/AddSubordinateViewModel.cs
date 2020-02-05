@@ -71,6 +71,7 @@ namespace StaffManager.ViewModel
             if (StaffViewModel.ChangedEmployee.CanBeChief)
             {
                 db.Employees.Where(e => e.Id == StaffViewModel.ChangedEmployee.Id).FirstOrDefault().Subordinates.Add(db.Employees.Where(e => e.Id == SelectedEmployee.Id).FirstOrDefault());
+                db.SaveChanges();
             }
         }
         #endregion

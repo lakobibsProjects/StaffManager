@@ -72,8 +72,8 @@ namespace StaffManager.Model.EmployeeModel
                 }
             }  //todo: change logic to make private or protected
         }
-        public Salary Salary { get; set; }
-        public Position Position { get; set; }
+        public virtual Salary Salary { get; set; }
+        public virtual Position Position { get; set; }
         public bool CanBeChief { get; set; } = false;
         public ObservableCollection<Employee> Subordinates { get { return CanBeChief? subordinates : null; } set { subordinates = value; } }
 
@@ -109,7 +109,7 @@ namespace StaffManager.Model.EmployeeModel
         #region Methods
         public double GetWage()
         {
-            return Salary.CalculateSalary(this);
+            return Salary == null? this.GeneralRate : Salary.CalculateSalary(this);
         }
         public void AddSubordinate(Employee employee)
         {

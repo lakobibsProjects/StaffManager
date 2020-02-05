@@ -80,7 +80,7 @@ namespace StaffManager.ViewModel
             {
                 db.Employees.Add(employee);
             }
-
+            db.SaveChanges();
             OnCancel(obj);
         }
         #endregion

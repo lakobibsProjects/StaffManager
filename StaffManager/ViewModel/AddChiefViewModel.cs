@@ -54,6 +54,7 @@ namespace StaffManager.ViewModel
         {
             StaffViewModel.ChangedEmployee.Chief = SelectedChief;
             db.Employees.Where(e => e.Id == StaffViewModel.ChangedEmployee.Id).FirstOrDefault().Chief = db.Employees.Where(e => e.Id == SelectedChief.Id).FirstOrDefault();
+            db.SaveChanges();
             OnCancel(obj);
         }
         #endregion

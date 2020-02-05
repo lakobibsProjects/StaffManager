@@ -18,8 +18,8 @@ namespace StaffManager.Model.EmployeeModel
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = false;
-            result.Position  = context.Positions.Find(0);
-            result.Salary = context.SalaryTypes.Find(0);
+            result.Position  = context.Positions.Where(p => p.Id == 4).FirstOrDefault();
+            result.Salary = context.SalaryTypes.Where(s => s.Id == 4).FirstOrDefault();
 
             return result;
         }
@@ -28,8 +28,8 @@ namespace StaffManager.Model.EmployeeModel
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = true;
-            result.Position = context.Positions.Find(1);
-            result.Salary = context.SalaryTypes.Find(1);
+            result.Position = context.Positions.Where(p => p.Id == 1).FirstOrDefault();
+            result.Salary = context.SalaryTypes.Where(s => s.Id == 1).FirstOrDefault();
             result.Subordinates = new ObservableCollection<Employee>();
 
             return result;
@@ -39,8 +39,8 @@ namespace StaffManager.Model.EmployeeModel
         {
             Employee result = new Employee(name, salary, employmentDate);
             result.CanBeChief = true;
-            result.Position = context.Positions.Find(2);
-            result.Salary = context.SalaryTypes.Find(2);
+            result.Position = context.Positions.Where(p => p.Id == 2).FirstOrDefault();
+            result.Salary = context.SalaryTypes.Where(s => s.Id == 2).FirstOrDefault();
             result.Subordinates = new ObservableCollection<Employee>();
 
             return result;

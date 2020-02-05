@@ -37,10 +37,12 @@
                           SelectedItem="{Binding SelectedEmployee}">
                     <ListView.View>
                         <GridView>
+                            <GridViewColumn Header="Id" 
+                                            DisplayMemberBinding="{Binding Id}" />
                             <GridViewColumn Header="Name" 
                                             DisplayMemberBinding="{Binding Name}" />
                             <GridViewColumn Header="Position" 
-                                            DisplayMemberBinding="{Binding Position}" />
+                                            DisplayMemberBinding="{Binding Source=Position, Path=Name}" />
                             <GridViewColumn Header="Employment Date"
                                             DisplayMemberBinding="{Binding EmploymentDate, StringFormat={}{0:MM/dd/yyyy}}"/>
                         </GridView>

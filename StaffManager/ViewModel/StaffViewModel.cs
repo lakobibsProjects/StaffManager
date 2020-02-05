@@ -36,7 +36,7 @@ namespace StaffManager.ViewModel
             get
             {
                 if (SelectedEmployee != null)                    
-                    return db.Employees.Where(e => e.Id == SelectedEmployee.Id).FirstOrDefault().Subordinates;
+                    return new ObservableCollection<Employee>(db.Employees.Where(e => e.ChiefId == SelectedEmployee.Id));
                 return null;
             }
         }
@@ -47,9 +47,12 @@ namespace StaffManager.ViewModel
         {
             get
             {
-                if (SelectedEmployee != null)
+                if (SelectedEmployee == null)
+                    return 0;
+
+                if (SelectedEmployee.Salary != null)
                     return SelectedEmployee.Salary.CalculateSalary(SelectedEmployee);
-                return 0;
+                return SelectedEmployee.GeneralRate;
             }
         }
         public double SelectedSubordinateWage
@@ -76,7 +79,7 @@ namespace StaffManager.ViewModel
         {
             db = new StaffContext();
             Employees = new ObservableCollection<Employee>(db.Employees.ToList());
-            TotalWage = db.Employees.Sum(e => e.GetWage());
+            TotalWage = Employees.Sum(e => e.GetWage());
             #region Commands
             addChiefCommand = new DelegateCommand(OnAddChief);
             removeChiefCommand = new DelegateCommand(OnRemoveChief);
@@ -98,6 +101,7 @@ namespace StaffManager.ViewModel
         private void OnDeleteStuff(object obj)
         {
             db.Employees.Remove(SelectedEmployee);
+            db.SaveChanges();
             ActualizeCollection();
         }
 
@@ -139,6 +143,7 @@ namespace StaffManager.ViewModel
             if (obj is Employee)
             {
                 db.Employees.Where(e => e.Id == SelectedEmployee.Id).FirstOrDefault().Chief = null;
+                db.SaveChanges();
                 ActualizeCollection();
             }
         }
